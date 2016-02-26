@@ -1,0 +1,246 @@
+// triangle
+@mixin triangle($direction, $size, $BORDERCOLOR ) {
+    content:"";
+    height: 0;
+    width: 0;
+
+    @if $direction == top {
+        border-bottom:$size solid $BORDERCOLOR;
+        border-left:$size dashed transparent;
+        border-right:$size dashed transparent;
+    }
+    @else if $direction == right {
+        border-left:$size solid $BORDERCOLOR;
+        border-top:$size dashed transparent;
+        border-bottom:$size dashed transparent;
+    }
+    @else if $direction == bottom {
+        border-top:$size solid $BORDERCOLOR;
+        border-left:$size dashed transparent;
+        border-right:$size dashed transparent;
+    }
+    @else if $direction == left {
+        border-right:$size solid $BORDERCOLOR;
+        border-top:$size dashed transparent;
+        border-bottom:$size dashed transparent;
+    }
+}
+
+// arrow
+@mixin arrow($direction, $size, $BORDERCOLOR, $color, $width ) {
+    height: 0;
+    width: 0;
+    @include border-radius(3px);
+    &:after{
+        position:absolute;
+        content:'';
+        width:0;
+        height:0;
+        @include border-radius(3px);
+    }
+
+    @if $direction == top {
+        border-bottom:$size solid $BORDERCOLOR;
+        border-left:$size dashed transparent;
+        border-right:$size dashed transparent;
+        &:after{
+            left:-$size;
+            top:$width;
+            border-bottom:$size solid $color;
+            border-left:$size dashed transparent;
+            border-right:$size dashed transparent;
+        }
+    }
+    @else if $direction == right {
+        border-left:$size solid $BORDERCOLOR;
+        border-top:$size dashed transparent;
+        border-bottom:$size dashed transparent;
+        &:after{
+            right:$width;
+            top:-$size;
+            border-left:$size solid $color;
+            border-top:$size dashed transparent;
+            border-bottom:$size dashed transparent;
+        }
+    }
+    @else if $direction == bottom {
+        border-top:$size solid $BORDERCOLOR;
+        border-left:$size dashed transparent;
+        border-right:$size dashed transparent;
+        &:after{
+            left:-$size;
+            bottom:$width;
+            border-top:$size solid $color;
+            border-left:$size dashed transparent;
+            border-right:$size dashed transparent;
+        }
+    }
+    @else if $direction == left {
+        border-right:$size solid $BORDERCOLOR;
+        border-top:$size dashed transparent;
+        border-bottom:$size dashed transparent;
+        &:after{
+            left:$width;
+            top:-$size;
+            border-right:$size solid $color;
+            border-top:$size dashed transparent;
+            border-bottom:$size dashed transparent;
+        }
+    }
+}
+
+// line overflow
+@mixin line-overflow($line) {
+    white-space: normal;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    display:-webkit-box;
+    -webkit-line-clamp:$line; /* number of lines to show */
+    -webkit-box-orient:vertical;
+}
+
+// font face
+@mixin font-face($fontFamily, $fileName, $style: normal, $weight: normal){
+    @font-face{
+        font-family:$fontFamily;
+        font-style:$style;
+        font-weight:$weight;
+        src:url('../font/#{$fileName}.eot');
+        src:local('#{$fontFamily}'), url('../font/#{$fileName}.eot?#iefix') format('embedded-opentype'), url('../font/#{$fileName}.woff') format('woff'), url('../font/#{$fileName}.ttf') format('truetype'), url('../font/#{$fileName}.svg##{$fontFamily}') format('svg'), url('../font/#{$fileName}.otf') format('opentype');
+    }
+}
+
+// drop shadow
+@mixin drop-shadow($horizontal: 0, $vertical: 1px, $blur: 2px, $alpha: 0.1) {
+    -webkit-box-shadow:$horizontal $vertical  $blur rgba(0, 0, 0, $alpha);
+    -moz-box-shadow:$horizontal $vertical  $blur rgba(0, 0, 0, $alpha);
+    box-shadow:$horizontal $vertical  $blur rgba(0, 0, 0, $alpha);
+}
+
+// opacity
+@mixin opacity($opacity){
+    opacity:$opacity;
+    filter:alpha(opacity=$opacity * 100);
+}
+
+// transition
+@mixin trans($trans...){
+    -webkit-transition:$trans;
+    -moz-transition:$trans;
+    -ms-transition:$trans;
+    transition:$trans;
+}
+
+// border-radius
+@mixin border-radius($radius){
+    -webkit-border-radius:$radius;
+    -moz-border-radius:$radius;
+    -ms-border-radius:$radius;
+    border-radius:$radius;
+}
+
+// sprite
+@mixin sprite($img, $sp_name){
+    background-image: url(#{$img}?__sprite__#{$sp_name});
+}
+
+// base64
+@mixin base64($img){
+    background-image: url(#{$img}?__inline);
+}
+
+// border
+@mixin border($direction: all, $size: 1px, $style: solid, $color: $BORDERCOLOR){
+    @if $direction == all {
+        border:$size $style $color;
+    }
+    @else if $direction == top {
+        border-top:$size $style $color;
+    }
+    @else if $direction == right {
+        border-right:$size $style $color;
+    }
+    @else if $direction == bottom {
+        border-bottom:$size $style $color;
+    }
+    @else if $direction == left {
+        border-left:$size $style $color;
+    }
+}
+
+// clearfix
+%clearfix{
+    &:before,
+    &:after{
+        content: '';
+        display: table;
+        font: 0/0 a;
+    }
+    &:after{
+        clear: both;
+    }
+}
+
+// text-overflow
+%text-overflow{
+    overflow:hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    max-width:100%;
+}
+
+// transition
+%transition{
+    -webkit-transition:all 0.3 ease;
+    -moz-transition:all 0.3 ease;
+    -ms-transition:all 0.3 ease;
+    transition:all 0.3 ease;
+}
+
+// word break
+%word-break{
+    word-break:break-all;
+    word-wrap:break-word;
+    white-space: normal;
+}
+
+// hide text
+%hide-text{
+    font:0/0 a;
+    color:transparent;
+    text-shadow:none;
+    background-color:transparent;
+    border:0;
+}
+
+// no wrao
+%no-wrap{
+    white-space: nowrap;
+    max-width:100%;
+    overflow:hidden;
+}
+
+// appearance
+%appearance{
+    -webkit-appearance:none;
+    appearance:none;
+}
+
+// user select none
+%user-select-none{
+    -webkit-user-select:none;
+    user-select:none;
+}
+
+// border-box
+%border-box{
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+
+// inline-block top
+%inline-block-top{
+    display:inline-block;
+    vertical-align: top;
+}

@@ -1,0 +1,52 @@
+.doc{
+	font-size: 14px;
+	.header{
+		background: #12C281;
+		line-height: 60px;
+		height: 60px;
+		.con{
+			width: $LAYOUT_WIDTH;
+			margin: 0 auto;
+
+			.title{
+				color: #fff;
+				font-size: 30px;
+			}
+
+			.searchBox{
+				float: right;
+				.text{
+					width: 150px;
+					height: 20px;
+				}
+				.search{
+					width: 60px;
+					height: 22px;
+					color: #fff;
+					font-weight: bold;
+					background: #B9581D;
+				}
+			}
+		}
+	}
+	.footer{
+		background: #096543;
+		.con{
+			width: $LAYOUT_WIDTH;
+			margin: 0 auto;
+			color: #fff;
+			height: 30px;
+			line-height: 30px;
+		}
+	}
+}
+
+/*elements*/
+.g-input{
+	border: none;
+	border-radius: 3px;
+}
+.g-btn{
+	border: none;
+	border-radius: 3px;
+}

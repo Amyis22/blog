@@ -1,0 +1,32 @@
+{
+  "name": "blog",
+  "version": "0.1.0",
+  "description": "blog front-end project",
+  "main": "./src/scripts/release/index.js",
+  "scripts": {
+    "start": "webpack-dev-server ./src/scripts/release/index.js"
+  },
+  "author": "susan",
+  "license": "MIT",
+  "devDependencies": {
+    "css-loader": "^0.23.1",
+    "file-loader": "^0.8.5",
+    "node-sass": "^3.4.2",
+    "sass-loader": "^3.1.2",
+    "style-loader": "^0.13.0",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.12.14",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {
+    "jquery": "^2.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Amyis22/blog.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Amyis22/blog/issues"
+  },
+  "homepage": "https://github.com/Amyis22/blog#readme"
+}

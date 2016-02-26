@@ -1,0 +1,54 @@
+
+body,p,ul,li,dt,dd,h1,h2,h3,h4,h5,h6{
+    margin:0;
+    padding:0;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-size:100%;
+    font-weight:normal;
+}
+
+ul,li,dd{
+    list-style:none;
+}
+
+img{
+    border:none;
+    outline:none;
+}
+
+a{
+    text-decoration:none;
+    &:hover{
+        text-decoration:underline;
+    }
+}
+
+body{
+    font:12px/1.5 'microsoft yahei', arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background-color:$BODY_BG_COLOR;
+    min-width:$LAYOUT_WIDTH;
+}
+
+input, textarea, button, select{
+    font-size:1em;
+    font-family: inherit;
+}
+
+::-webkit-input-placeholder {
+    color: $GRAY;
+}
+
+:-moz-placeholder {
+    color: $GRAY;
+}
+
+::-moz-placeholder {
+    color: $GRAY;
+}
+
+input:-ms-input-placeholder {
+    color: $GRAY;
+}
