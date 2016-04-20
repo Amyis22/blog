@@ -2,6 +2,7 @@ module.exports = {
 	entry: './src/scripts/release/index.js',
 	output: {
 		path: __dirname,
+		publicPath: '/src/styles',
 		filename: './src/scripts/release/bundle.js'
 	},
 	module: {

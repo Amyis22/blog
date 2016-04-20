@@ -1,52 +1,88 @@
+body{
+    font: 14px/1.5 "Open Sans","microsoft yahei", Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing: antialiased; /*字体灰阶平滑*/
+    background-color: $BODY_BG_COLOR;
+    min-width: $LAYOUT_WIDTH;
+    color: $TEXTCOLOR;
+}
+
 .doc{
-	font-size: 14px;
-	.header{
-		background: #12C281;
-		line-height: 60px;
+	margin: 0 auto;
+	.container{
+		width: $LAYOUT_WIDTH;
+		margin: 0 auto;
+	}
+}
+
+.header{
+	background: #fff;
+	border-bottom: 1px solid #ddd;
+	.top{
 		height: 60px;
-		.con{
-			width: $LAYOUT_WIDTH;
-			margin: 0 auto;
-
-			.title{
-				color: #fff;
-				font-size: 30px;
-			}
-
-			.searchBox{
-				float: right;
-				.text{
-					width: 150px;
-					height: 20px;
-				}
-				.search{
-					width: 60px;
-					height: 22px;
-					color: #fff;
-					font-weight: bold;
-					background: #B9581D;
-				}
-			}
+		line-height: 60px;
+		position: relative;
+		.title{
+			font-size: 30px;
 		}
-	}
-	.footer{
-		background: #096543;
-		.con{
-			width: $LAYOUT_WIDTH;
-			margin: 0 auto;
-			color: #fff;
+		.searchBox{
+			position: absolute;
+			bottom: 15px;
+			right: 0;
 			height: 30px;
+			padding-left: 10px;
 			line-height: 30px;
+			border: 1px solid #ccc;
+			@include border-radius(5px);
+			display: inline-block;
+			.input {
+				width: 220px;
+			}
+			.go-search {
+				color: $TEXTCOLOR_HIGH;
+				font-size: 18px;
+				font-weight: bold;
+				margin-right: 5px;
+				cursor: pointer;
+			}
 		}
 	}
+	.menu {
+		height: 30px;
+		line-height: 30px;
+		li {
+			display: inline-block;
+			font-size: 16px;
+			width: 120px;
+			a {
+				color: #AEBDC1;
+				text-decoration: none;
+				&:hover {
+					color: #393d40;
+				}
+				
+			}
+			&.cur a{
+				color: $TEXTCOLOR_HIGH;
+				&:hover {
+					color: rgb(147, 192, 202);
+				}
+			}
+
+		}
+	}
+}
+.footer{
+	background: #2D3033;
+	.container{
+		color: #A4B1B5;
+		height: 30px;
+		line-height: 30px;
+	}	
 }
 
 /*elements*/
 .g-input{
+	outline: none;
 	border: none;
-	border-radius: 3px;
-}
-.g-btn{
-	border: none;
-	border-radius: 3px;
+	width: 100%;
 }

@@ -20,16 +20,10 @@ img{
 
 a{
     text-decoration:none;
+    color: inherit;
     &:hover{
         text-decoration:underline;
     }
-}
-
-body{
-    font:12px/1.5 'microsoft yahei', arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    background-color:$BODY_BG_COLOR;
-    min-width:$LAYOUT_WIDTH;
 }
 
 input, textarea, button, select{
