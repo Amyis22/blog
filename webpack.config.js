@@ -1,9 +1,11 @@
 module.exports = {
-	entry: './src/scripts/release/index.js',
+	entry: {
+		'index' : './src/release/index.js',
+		'article_detail' : './src/release/article_detail.js'
+	},
 	output: {
 		path: __dirname,
-		publicPath: '/src/styles',
-		filename: './src/scripts/release/bundle.js'
+		filename: './dist/[name].js'
 	},
 	module: {
 		loaders: [

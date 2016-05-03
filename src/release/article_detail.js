@@ -1,0 +1,1 @@
+require('../styles/release/article_detail.scss');
