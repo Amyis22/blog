@@ -91,7 +91,7 @@
 		}
 		.artical-cat {
 			@include border-radius(5px);
-			background: $GREEN;
+			background: $TEXTCOLOR_HIGH;
 			color: #fff;
 			padding: 3px;
 			font-weight: bold;
@@ -116,7 +116,7 @@
 			overflow: hidden;
 		}
 		.artical-link {
-			color: $GREEN;
+			color: $TEXTCOLOR_HIGH;
 			margin-top: 8px;
 		}
 	}

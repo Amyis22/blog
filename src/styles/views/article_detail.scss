@@ -1,3 +1,69 @@
 .mod-detail {
-	
+	/* 面包屑 */
+	.bread {
+		margin: 10px 0;
+		font-size: 12px;
+		font-weight: bold;
+	}
+	.next {
+		@include border-radius(10px);
+		// border: 1px solid #ccc;
+		padding: 5px;
+		// text-align: center;
+		font-size: 13px;
+		line-height: 24px;
+		a {
+			display: block;
+		}
+		.fa {
+			color: $TEXTCOLOR_HIGH;
+		}
+	}
+
+	/* 文章正文 */
+	.main {
+		.title {
+			font-size: 20px;
+			text-align: center;
+			margin: 10px;
+		}
+		.info {
+			font-size: 14px;
+		}
+	}
+	.main-content {
+		line-height: 30px;
+		img{
+			@include border-radius(10px);
+			box-shadow: 1px 1px 1px #999;
+			margin: 10px 0;
+		}
+		blockquote {
+			@include border-radius(10px);
+			padding: 20px;
+			background: #eee;
+			border: 1px solid #ccc;
+		}
+	}
+
+	/* 评论输入 */
+
+	/* 评论展示 */
+	.comments {
+		.title {
+			font-size: 18px;
+			margin: 10px 0;
+			display: inline-block;
+			border-bottom: 2px solid $TEXTCOLOR_HIGH;
+			.num {
+				font-size: 14px;
+			}
+		}
+		.comment-wrap {
+			line-height: 25px;
+		}
+		.comment {
+			margin-left: 50px;
+		}
+	}
 }

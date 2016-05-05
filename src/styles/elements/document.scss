@@ -89,3 +89,29 @@ body{
 	border: none;
 	width: 100%;
 }
+
+.g-btn{
+	@include border-radius(3px);
+	padding: 5px;
+	background: $TEXTCOLOR_HIGH;
+	color: #fff;
+	cursor: pointer;
+	&:hover{
+		background: #067E96;
+	}
+}
+
+.form-row {
+	height: 40px;
+	.label {
+		width: 100px;
+		display: inline-block;
+	}
+	.form-input {
+		@include border-radius(2px);
+		border: 1px solid #999;
+		height: 30px;
+		display: inline-block;
+		width: 300px;
+	}
+}
