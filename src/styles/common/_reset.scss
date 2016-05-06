@@ -1,5 +1,5 @@
 
-body,p,ul,li,dt,dd,h1,h2,h3,h4,h5,h6,blockquote{
+body,p,ul,ol,dt,dd,h1,h2,h3,h4,h5,h6,blockquote,th,td{
     margin:0;
     padding:0;
 }
@@ -9,7 +9,7 @@ h1,h2,h3,h4,h5,h6{
     font-weight:normal;
 }
 
-ul,li,dd{
+ul,dd{
     list-style:none;
 }
 
@@ -29,6 +29,13 @@ a{
 input, textarea, button, select{
     font-size:1em;
     font-family: inherit;
+}
+
+table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-align: left;
 }
 
 ::-webkit-input-placeholder {

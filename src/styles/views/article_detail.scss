@@ -3,13 +3,10 @@
 	.bread {
 		margin: 10px 0;
 		font-size: 12px;
-		font-weight: bold;
 	}
 	.next {
 		@include border-radius(10px);
-		// border: 1px solid #ccc;
 		padding: 5px;
-		// text-align: center;
 		font-size: 13px;
 		line-height: 24px;
 		a {
@@ -36,13 +33,31 @@
 		img{
 			@include border-radius(10px);
 			box-shadow: 1px 1px 1px #999;
-			margin: 10px 0;
+			margin-top: 10px;
 		}
-		blockquote {
+		blockquote, ol {
 			@include border-radius(10px);
 			padding: 20px;
 			background: #eee;
 			border: 1px solid #ccc;
+			margin-top: 10px;
+		}
+		ol {
+			padding: 10px;
+			li {
+				list-style-position: inside;
+			}
+		}
+		table {
+			margin-top: 10px;
+		}
+		th, td{
+			border: 1px solid #ccc;
+			padding: 5px;
+		}
+		th {
+			text-align:center;
+			background: #eee;
 		}
 	}
 

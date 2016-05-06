@@ -105,7 +105,9 @@ body{
 	height: 40px;
 	.label {
 		width: 100px;
+		// line-height: 40px;
 		display: inline-block;
+		vertical-align:middle;
 	}
 	.form-input {
 		@include border-radius(2px);
@@ -113,5 +115,15 @@ body{
 		height: 30px;
 		display: inline-block;
 		width: 300px;
+		.g-input {
+			height: 92%;
+		}
+	}
+}
+
+.form-row-textarea{
+	height: 76px;
+	.label {
+		vertical-align: top;
 	}
 }
