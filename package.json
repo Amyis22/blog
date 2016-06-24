@@ -4,13 +4,15 @@
   "description": "blog front-end project",
   "main": "./src/scripts/release/index.js",
   "scripts": {
-    "start": "webpack-dev-server --hot --inline ./src/release/article_detail.js"
+    "start": "webpack-dev-server --hot --inline --display-error-details",
+    "build": "webpack"
   },
   "author": "susan",
   "license": "MIT",
   "devDependencies": {
     "css-loader": "^0.23.1",
     "file-loader": "^0.8.5",
+    "html-loader": "^0.4.3",
     "node-sass": "^3.4.2",
     "sass-loader": "^3.1.2",
     "style-loader": "^0.13.0",

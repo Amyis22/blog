@@ -11,7 +11,8 @@ module.exports = {
 		loaders: [
 			{test: /\.scss$/, loader: 'style-loader!css-loader!sass-loader!'},
 			{test: /\.css$/, loader: 'style!css!'},
-			{test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192'}
+			{test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192'},
+			{test: /\.(html|tpl)$/, loader: 'html-loader'}
 		]
 	}
 }
